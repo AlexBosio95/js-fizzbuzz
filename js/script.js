@@ -11,29 +11,23 @@ for (let index = 1; index <= 100; index++) {
     createBox.classList.add('col-2');
     createBox.innerHTML = index;
 
+    boxUser.append(createBox);
+
     if ((index % 3 == 0) && (index % 5 == 0) ) {
         console.log('FrizzBuzz');
-        boxUser.append('FrizzBuzz');
+        createBox.append('FrizzBuzz');
     }
     else if (index % 3 == 0){
         console.log('Frizz')
-        boxUser.append('Frizz');
+        createBox.append('Frizz');
     }
     else if (index % 5 == 0){
         console.log('Buzz')
-        boxUser.append('Buzz');
+        createBox.append('Buzz');
     }
     else{
         console.log(index);
-        boxUser.append(createBox);
+        createBox.append(index);
     }
-
-    
-
-    
-
-    
-
-    
 
 }
