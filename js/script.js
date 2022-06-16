@@ -3,18 +3,37 @@
 // Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
 
 
+const boxUser = document.querySelector('#box');
+
 for (let index = 1; index <= 100; index++) {
 
+    const createBox = document.createElement('div');
+    createBox.classList.add('col-2');
+    createBox.innerHTML = index;
+
     if ((index % 3 == 0) && (index % 5 == 0) ) {
-        console.log('FrizzBuzz')
+        console.log('FrizzBuzz');
+        boxUser.append('FrizzBuzz');
     }
     else if (index % 3 == 0){
         console.log('Frizz')
+        boxUser.append('Frizz');
     }
     else if (index % 5 == 0){
         console.log('Buzz')
+        boxUser.append('Buzz');
     }
     else{
-        console.log(index)
+        console.log(index);
+        boxUser.append(createBox);
     }
+
+    
+
+    
+
+    
+
+    
+
 }
