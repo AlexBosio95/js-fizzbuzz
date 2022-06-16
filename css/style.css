@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ms_case{
+    height: calc(100vw / 5 - 90px);
+    color: white;
+    text-align: center;
+    font-size: 2.7rem;
+    line-height: calc(100vw / 5 - 90px);
+    cursor: pointer;
+}
+
+.ms_case:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
