@@ -8,44 +8,50 @@ const boxUser = document.querySelector('#box');
 for (let index = 1; index <= 100; index++) {
 
     const userSel = document.querySelector('#sel-user');
+    
+    // creo l'elemento
     const createBox = document.createElement('div');
-    createBox.classList.add('col-2', 'm-3', 'shadow-sm', 'rounded-4' ,'ms_case');
+    
+    // aggiungo le classi all'elemto
+    createBox.classList.add('col-2', 'm-3', 'shadow-sm', 'rounded-3' ,'ms_case');
+    
+    // Rapprento sul DOM 
     createBox.innerHTML = index;
 
-    boxUser.append(createBox);
 
+
+// si può scrivere anche (index % == 15) 3 * 5
     if ((index % 3 == 0) && (index % 5 == 0) ) {
         console.log('FrizzBuzz');
+        // aggiunta classe all'elemto
         createBox.innerHTML = ('FrizzBuzz');
         createBox.classList.add('bg-success');
-        document.addEventListener('click', function() {
-            userSel.innerHTML = ('FrizzBuzz');
-       });
-
     }
     else if (index % 3 == 0){
         console.log('Frizz')
         createBox.innerHTML = ('Frizz');
+        // aggiunta classe all'elemto
         createBox.classList.add('bg-danger');
-        document.addEventListener('click', function() {
-            userSel.innerHTML = ('Frizz');
-       });
     }
     else if (index % 5 == 0){
-        console.log('Buzz')
+        console.log('Buzz');
         createBox.innerHTML = ('Buzz');
+        // aggiunta classe all'elemto
         createBox.classList.add('bg-warning');
-        document.addEventListener('click', function() {
-            userSel.innerHTML = ('Buzz');
-       });
     }
     else{
         console.log(index);
         createBox.innerHTML = index;
+        // aggiunta classe all'elemto
         createBox.classList.add('bg-secondary');
-        document.addEventListener('click', function() {
-            userSel.innerHTML = index;
-       });
     }
+
+    createBox.addEventListener('click', function(){
+        // alert(createBox.innerHTML)
+        userSel.innerHTML = (createBox.innerHTML);
+    })
+
+    boxUser.append(createBox);
+
 
 }

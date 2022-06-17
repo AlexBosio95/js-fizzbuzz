@@ -15,5 +15,5 @@
 
 .ms_case:hover{
     transform: scale(1.05);
-    transition: 1s;
+    transition: 0.6s;
 }
